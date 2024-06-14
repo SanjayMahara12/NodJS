@@ -1,5 +1,6 @@
 const axios = require('axios');
 const inquirer = require("inquirer");
+const notifier = require("node-notifier");
 require('dotenv').config({ path: './test.env' });
 
 const storage_url = process.env.DATABASE_URL + 'pool';
@@ -31,6 +32,12 @@ function promptUser() {
         }
     ]).then(function (answer) {
         console.log(answer.poolid);
+        notifier.notify({
+            title:"Pool Choosen to Rebalance,"+answer.poolid.toString(),
+            subtitle:"pool id choosen is",
+            message:"this pool id can be used to make changes to the storage pool",
+            wait:true
+        });
     });
 }
 
