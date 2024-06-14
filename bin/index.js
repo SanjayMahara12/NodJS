@@ -1,2 +1,24 @@
+#! /usr/bin/env node
 const storageinfo = require("../utils/storage");
-storageinfo();
+const nodeinfo = require("../utils/nodes");
+const gridinfo = require("../utils/pool");
+//storageinfo(); //for direct data print on the console 
+//nodeinfo(); 
+const {program}= require("commander");
+
+program
+  .command('storageinfo')
+  .description('list down all the storage spaces in use or available')
+  .action(storageinfo);
+
+  program
+  .command('nodeinfo')
+  .description('list down all the nodes')
+  .action(nodeinfo);
+
+  program
+  .command('gridinfo <poolid>')
+  .description('get all the info on the grid based on the pool id passed')
+  .action(gridinfo);
+
+  program.parse();
