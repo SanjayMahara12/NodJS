@@ -1,7 +1,8 @@
 #! /usr/bin/env node
 const storageinfo = require("../utils/storage");
 const nodeinfo = require("../utils/nodes");
-const gridinfo = require("../utils/pool");
+const poolinfo = require("../utils/pool");
+const gridinfo = require("../utils/gridinfo");
 //storageinfo(); //for direct data print on the console 
 //nodeinfo(); 
 const {program}= require("commander");
@@ -17,7 +18,12 @@ program
   .action(nodeinfo);
 
   program
-  .command('gridinfo <poolid>')
+  .command('poolinfo <poolid>')
+  .description('get all the info on the grid based on the pool id passed')
+  .action(poolinfo);
+
+  program
+  .command('gridinfo')
   .description('get all the info on the grid based on the pool id passed')
   .action(gridinfo);
 

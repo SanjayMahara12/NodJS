@@ -32,4 +32,4 @@ const {program}= require("commander");<br/> //as we used in the index.js for the
 - npm install -g .   //one the env update for command is done then this line is needed to run again<br/>
 
 - healthpac storageinfo  //this will do the same as "node ./bin/index.js storageinfo" but as a command
-- healthpac gridinfo 1  //calling a parameterised data 
+- healthpac poolinfo 1  //calling a parameterised data 
