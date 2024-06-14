@@ -1,0 +1,19 @@
+{
+  "name": "healthpac",
+  "version": "1.0.0",
+  "description": "health pack for the multi node system ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sanjay mahara",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "inquirer": "^9.2.23",
+    "node-notifier": "^10.0.1",
+    "tty-table": "^4.2.3"
+  }
+}
