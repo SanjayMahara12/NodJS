@@ -1,4 +1,5 @@
 #! /usr/bin/env node
+
 const storageinfo = require("../utils/storage");
 const nodeinfo = require("../utils/nodes");
 const poolinfo = require("../utils/pool");
@@ -6,7 +7,6 @@ const gridinfo = require("../utils/gridinfo");
 //storageinfo(); //for direct data print on the console 
 //nodeinfo(); 
 const {program}= require("commander");
-
 program
   .command('storageinfo')
   .description('list down all the storage spaces in use or available')

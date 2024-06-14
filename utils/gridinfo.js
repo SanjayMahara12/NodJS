@@ -2,43 +2,37 @@ const axios = require('axios');
 const inquirer = require("inquirer");
 require('dotenv').config({ path: './test.env' });
 
-const storage_url = process.env.DATABASE_URL + 'pool?1';
-let poolIds = [];
+const storage_url = process.env.DATABASE_URL + 'pool';
+var poolIds = [];
 var inum = 0;
-async function fetchData() {
-    try {
-        poolIds=[];
-        const response = await axios.get(storage_url);
-        response.data.forEach((item) => {
-            inum++;
-            if(inum<=3) {
-            poolIds.push(item.id)
-            }
-            
-        });
-        console.log(inum);
-        // Once data is fetched, prompt the user
-        promptUser();
-    } catch (error) {
-        console.log(error);
-    }
-}
+axios.get('http://localhost:3000/pool')
+  .then(function (response) {
+    // handle success
+    poolIds=response.data;
+    //console.table(poolIds);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .finally(function () {
+    // always executed
+  });
 
+
+console.log(poolIds.data);
 function promptUser() {
     inquirer.prompt([
         {
-            name: 'PoolId',
+            name: 'poolid',
             message: 'Choose the pool id from the table?',
             type: 'list',
-            choices: poolIds
+            choices: [1,2,3]
         }
     ]).then(function (answer) {
-        console.log(answer.choices);
+        console.log(answer.poolid);
     });
 }
 
-// Call fetchData to start the process
-fetchData();
-
 // Export fetchData function for reusability if needed
-module.exports = fetchData;
+module.exports = promptUser;
