@@ -33,15 +33,13 @@ const {program}= require("commander");<br/> //as we used in the index.js for the
 
 - healthpac storageinfo  //this will do the same as "node ./bin/index.js storageinfo" but as a command <br/>
 - healthpac poolinfo 1  //calling a parameterised data  <br/>
-
 - add the node-notifier for any notification to subscribe to  <br/>
     const notifier = require('node-notifier'); <br/>
-    // String <br/>
-    notifier.notify('Message'); <br/>
- <br/>
-    // Object <br/>
-    notifier.notify({ <br/>
-    title: 'My notification', <br/>
-    message: 'Hello, there!' <br/>
-    }); <br/> <br/>
+ // String <br/>
+ notifier.notify('Message'); <br/>
+ // Object <br/>
+ notifier.notify({ <br/>
+ title: 'My notification', <br/>
+ message: 'Hello, there!' <br/>
+ }); <br/> <br/>
 
