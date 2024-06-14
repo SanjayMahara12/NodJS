@@ -12,5 +12,10 @@ Tty Table     - to format the output table <br/>
             //and the command we pass to the console is decrypted by the commander module<br/>
            //<br/><br/>
 - npm install axios chalk commander inquirer node-notifier tty-table<br/>
+- add a folder called bin //update the mapping in package.json for index file to this location
+- "bin":{<br/>
+    "healthpac": "./bin/index.js"<br/>
+  } //adding this in the package.json to tell a command name and where this command should go<br/>
+
 
 
