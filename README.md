@@ -31,5 +31,17 @@ const {program}= require("commander");<br/> //as we used in the index.js for the
 - #! /usr/bin/env node   //add this line at the top of the index.js file to tell that that this code will run via user/bin env path else the command healpac will not be taken as the clr command<br/>
 - npm install -g .   //one the env update for command is done then this line is needed to run again<br/>
 
-- healthpac storageinfo  //this will do the same as "node ./bin/index.js storageinfo" but as a command
-- healthpac poolinfo 1  //calling a parameterised data 
+- healthpac storageinfo  //this will do the same as "node ./bin/index.js storageinfo" but as a command <br/>
+- healthpac poolinfo 1  //calling a parameterised data  <br/>
+
+- add the node-notifier for any notification to subscribe to  <br/>
+    const notifier = require('node-notifier'); <br/>
+    // String <br/>
+    notifier.notify('Message'); <br/>
+ <br/>
+    // Object <br/>
+    notifier.notify({ <br/>
+    title: 'My notification', <br/>
+    message: 'Hello, there!' <br/>
+    }); <br/> <br/>
+
