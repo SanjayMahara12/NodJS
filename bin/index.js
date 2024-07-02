@@ -4,6 +4,8 @@ const storageinfo = require("../utils/storage");
 const nodeinfo = require("../utils/nodes");
 const poolinfo = require("../utils/pool");
 const gridinfo = require("../utils/gridinfo");
+const add = require("../utils/abc");
+console.log(add(2,5));
 //storageinfo(); //for direct data print on the console 
 //nodeinfo(); 
 const {program}= require("commander");

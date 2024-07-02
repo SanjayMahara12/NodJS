@@ -1,4 +1,5 @@
 # NodJS
+https://www.udemy.com/course/lets-build-a-nodejs-based-clicommand-line-interface/learn/lecture/26484316?start=0#overview
 
 Axios  - for calling different apis <br/>
 chalk  - for beautifying console output <br/>
@@ -30,7 +31,7 @@ const {program}= require("commander");<br/> //as we used in the index.js for the
 <br/><br/>
 - #! /usr/bin/env node   //add this line at the top of the index.js file to tell that that this code will run via user/bin env path else the command healpac will not be taken as the clr command<br/>
 - npm install -g .   //one the env update for command is done then this line is needed to run again<br/>
-
+//run in the command prompt not in the powershell prompt , as you might face the previledge issue 
 - healthpac storageinfo  //this will do the same as "node ./bin/index.js storageinfo" but as a command <br/>
 - healthpac poolinfo 1  //calling a parameterised data  <br/>
 - add the node-notifier for any notification to subscribe to  <br/>
