@@ -44,3 +44,11 @@ const {program}= require("commander");<br/> //as we used in the index.js for the
  message: 'Hello, there!' <br/>
  }); <br/> <br/>
 
+Every module in NodeJS is wrapped into IIFE.(The module Wrapper)
+IIFE keeps the high level variables scoped to the module rather than the global object.
+IIFE contains 5 parameters along with this operator 
+(function(exports,require,module,__filename,__dirname){
+  //some logic 
+})
+
+Module Caching: 
