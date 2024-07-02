@@ -1,0 +1,8 @@
+{
+    "name" : "Sanjay Mahara",
+    "address" : {
+        "city" : "pithoragarh",
+        "street":"dasaithal",
+        "zip":123456
+    }
+}
