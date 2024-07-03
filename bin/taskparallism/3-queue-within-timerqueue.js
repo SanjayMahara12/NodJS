@@ -4,8 +4,8 @@ console.log("sync log call 1");
 const timeout = 3;
 setTimeout(() => {
     console.log("this is the setTImeout 1");
-    process.nextTick(()=>{
-   console.log("this is inner next.Tick within the setTimeout 1");
+    process.nextTick(() => {
+        console.log("this is inner next.Tick within the setTimeout 1");
     });
 }, timeout);
 setTimeout(() => {
