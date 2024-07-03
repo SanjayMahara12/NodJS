@@ -1,9 +1,9 @@
 //io queues like fs and https 
 const fs = require("node:fs");
-
+const timeout =5;
 setTimeout(() => {
     console.log("this is setTimeout timer queue 1");
-}, 0); //try increasing this value and check result for it and io queue
+}, timeout); //try increasing this value and check result for it and io queue
 //the zero in settimeout is not actually zero
 //in the c code of v8 we find that minimum value is actually 1 millisecond
 //which means to check the timer if 1 millisend has elapsed or not 
@@ -15,10 +15,10 @@ fs.readFile(__filename, () => {
     console.log("readFile i/o queue 1");
 });
 
-process.nextTick(() => {
+/* process.nextTick(() => {
     console.log("this is nextTick 1");
 });
 
 Promise.resolve().then(() => {
     console.log("this is Promise.resolve 1");
-});
+}); */
