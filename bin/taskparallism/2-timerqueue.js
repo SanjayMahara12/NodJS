@@ -1,8 +1,9 @@
 
 /* //timer queue syntax .....testing the priority with other queues
-Promise.resolve().then(() => {
-    console.log("this is Promise.Resolve 1"); //t
-});
+  //both the setTimer and setInterval are the timer queues 
+setTimeout(() => {
+    console.log("this is the setTImeout 1");
+}, timeout);
  */
 //###Testing the priority of return and callback from the callstack###
 //doesnt matter where we take the setTimeout queue start or at the end of the call

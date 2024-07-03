@@ -15,10 +15,10 @@ fs.readFile(__filename, () => {
     console.log("readFile i/o queue 1");
 });
 
-/* process.nextTick(() => {
+ process.nextTick(() => {
     console.log("this is nextTick 1");
 });
 
 Promise.resolve().then(() => {
     console.log("this is Promise.resolve 1");
-}); */
+}); 
